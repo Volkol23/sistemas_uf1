@@ -2,6 +2,10 @@
 
 echo "Ejercicio de bulces"
 
-for FILE in `ls *.mp4`; do
-	md5sum $FILE
+for FILE in `ls`; do
+	 if [ -e $FILE ];then
+		 echo "El archivo $FILE existe"
+	 else
+		echo "El archivo $FILE no existe"
+	 fi
 done
